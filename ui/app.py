@@ -214,7 +214,7 @@ with col2:
                 st.json(result)
 
             if st.checkbox("Save request to CSV"):
-                log_file = "predictions_log.csv"
+                log_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "predictions_log.csv")
                 file_exists = os.path.exists(log_file)
                 df = pd.DataFrame([payload])
                 df["probability_over_50k"] = prob

@@ -88,8 +88,10 @@ app = FastAPI(
     lifespan= lifespan
 )
 
-MODEL_PATH = "adult_lgbm_model.pkl"
-META_PATH = "adult_lgbm_metadata.pkl"
+# Construct absolute paths to model files
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "..", "adult_lgbm_model.pkl")
+META_PATH = os.path.join(BASE_DIR, "..", "adult_lgbm_metadata.pkl")
 
 def predict_single(record_dict: dict) -> float:
     """

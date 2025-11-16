@@ -1,7 +1,7 @@
 import requests
 import sys
 
-URL = "http://localhost:8000/predict"
+URL = "http://localhost:9696/predict"
 
 # Example record must follow the AdultRecord schema in main.py
 record = {

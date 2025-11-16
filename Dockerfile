@@ -6,15 +6,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
+# Copy requirements and install dependencies
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY main.py adult_lgbm_model.pkl adult_lgbm_metadata.pkl ./
+# Copy model artifacts to the root of the app directory
+COPY src/main.py adult_lgbm_model.pkl adult_lgbm_metadata.pkl ./
+
 
 EXPOSE 9696
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "9696"]
+# Update the command to run the app from the src module
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "9696"]
 
 
 

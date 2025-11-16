@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import joblib
+import os
 
 from lightgbm import LGBMClassifier
 from sklearn.metrics import (
@@ -12,9 +13,15 @@ from sklearn.metrics import (
     average_precision_score,
 )
 
+# Construct absolute paths
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.join(BASE_DIR, "..")
+
 # paths
-train_path = "adult/adult.data"
-test_path = "adult/adult.test"
+train_path = os.path.join(PROJECT_ROOT, "data", "adult", "adult.data")
+test_path = os.path.join(PROJECT_ROOT, "data", "adult", "adult.test")
+model_output_path = os.path.join(PROJECT_ROOT, "adult_lgbm_model.pkl")
+meta_output_path = os.path.join(PROJECT_ROOT, "adult_lgbm_metadata.pkl")
 
 column_names = [
     'age', 'workclass', 'fnlwgt', 'education', 'education_num', 'marital_status',
@@ -112,11 +119,11 @@ metadata = {
     "params": best_params,
 }
 
-with open("adult_lgbm_model.pkl", "wb") as model_out:
+with open(model_output_path, "wb") as model_out:
     joblib.dump(model, model_out)
 
-with open("adult_lgbm_metadata.pkl", "wb") as meta_out:
+with open(meta_output_path, "wb") as meta_out:
     joblib.dump(metadata, meta_out)
 
-print("\nModel saved to adult_lgbm_model.pkl")
-print("Metadata saved to adult_lgbm_metadata.pkl")
+print(f"\nModel saved to {model_output_path}")
+print(f"Metadata saved to {meta_output_path}")
