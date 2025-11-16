@@ -1,0 +1,22 @@
+[project]
+name = "zoomcamp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.121.2",
+    "lightgbm>=4.6.0",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
+    "uvicorn>=0.38.0",
+]
+
+[dependency-groups]
+dev = [
+    "missingno>=0.5.2",
+    "requests>=2.32.5",
+    "seaborn>=0.13.2",
+    "tqdm>=4.67.1",
+    "xgboost>=3.1.1",
+]
