@@ -24,9 +24,11 @@ This project focuses on building and deploying a machine learning model to predi
 ## Live Demo
 
 The FastAPI backend is deployed and accessible at: `https://predict-income-latest.onrender.com`
+![Cloud Deployment](https://github.com/nice-bills/lunco_photos/blob/main/Screenshot_16-11-2025_204324_dashboard.render.com.jpeg?raw=true)
+
 
 The Streamlit UI is configured to connect to this deployed backend by default.
-
+![Streamlit Dashboard](https://github.com/nice-bills/lunco_photos/blob/main/Screenshot_16-11-2025_204353_localhost.jpeg?raw=true)
 ## Tech Stack
 
 *   **Python:** Core programming language.
@@ -224,7 +226,7 @@ uv run streamlit run ui/app.py
 $env:API_BASE_URL="http://localhost:9696"
 uv run streamlit run ui/app.py
 ```
-
+![Streamlit Dashboard](https://github.com/nice-bills/lunco_photos/blob/main/Screenshot_16-11-2025_211024_localhost.jpeg?raw=true)
 ### 6. Docker Deployment (Optional)
 
 You can build and run the entire application using Docker.
