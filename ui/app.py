@@ -65,7 +65,7 @@ COUNTRY_OPTIONS = [
 # --- Sidebar form ---
 with st.sidebar.form("input_form"):
     st.header("Input features")
-    age = st.number_input("Age", min_value=15, max_value=100, value=37)
+    age = st.number_input("Age", min_value=18, max_value=100, value=37)
     workclass = st.selectbox("Workclass", FEATURE_OPTIONS.get("workclass", WORKCLASS_OPTIONS), index=0)
     education = st.selectbox("Education", FEATURE_OPTIONS.get("education", EDUCATION_OPTIONS), index=EDUCATION_OPTIONS.index("HS-grad")) # Default to HS-grad
     education_num = EDU_TO_NUM[education]
