@@ -41,7 +41,7 @@ The Streamlit UI is configured to connect to this deployed backend by default.
 *   **Containerization:** `Docker`.
 *   **Cloud Platform:** `Render`.
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 .
@@ -65,7 +65,7 @@ The Streamlit UI is configured to connect to this deployed backend by default.
 └── adult_lgbm_model.pkl    # Trained LightGBM model
 ```
 
-## 📊 Dataset
+## Dataset
 
 The project utilizes the **Adult Income Dataset** from the UCI Machine Learning Repository.
 
@@ -89,7 +89,7 @@ The project utilizes the **Adult Income Dataset** from the UCI Machine Learning 
     *   `native-country`: United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&Tobago, Peru, Hong, Holand-Netherlands.
     *   `income`: >50K, <=50K (target variable).
 
-## 🔍 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 The `notebooks/eda.ipynb` notebook provides a detailed EDA, covering:
 
@@ -100,7 +100,7 @@ The `notebooks/eda.ipynb` notebook provides a detailed EDA, covering:
 *   **Correlation Analysis:** Heatmaps to visualize correlations between numerical features.
 *   **Feature Importance:** Univariate analysis using Pearson correlation, F-value, Mutual Information, and categorical separation to rank features by their predictive power.
 
-## 🧠 Model Training & Comparison
+## Model Training & Comparison
 
 The `notebooks/model_train.ipynb` and `notebooks/Xgb_lgbm_tune.ipynb` notebooks detail the machine learning pipeline:
 
@@ -150,7 +150,7 @@ Models were evaluated on a dedicated test set using:
 
 
 
-## ⚙️ Setup and Usage
+## Setup and Usage
 
 ### Prerequisites
 
@@ -245,10 +245,10 @@ docker run -p 9696:9696 -p 8501:8501 income-prediction
 
 This will start both the FastAPI backend (on port 9696) and the Streamlit frontend (on port 8501) within the Docker container. You can then access them via `http://localhost:9696` and `http://localhost:8501` respectively.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
