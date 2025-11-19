@@ -23,7 +23,9 @@ This project focuses on building and deploying a machine learning model to predi
 
 ## Live Demo
 
-The FastAPI backend is deployed and accessible at: `https://predict-income-latest.onrender.com`
+The FastAPI backend is deployed and accessible at: `https://predict-income-latest.onrender.com` you would need to wait for atleast 1 min because of Render's cold startup of free accounts
+
+The Streamlit frontend is also deployed and accessible at: `https://census-income-classifier.streamlit.app/`
 ![Cloud Deployment](https://github.com/nice-bills/lunco_photos/blob/main/Screenshot_16-11-2025_204324_dashboard.render.com.jpeg?raw=true)
 
 
