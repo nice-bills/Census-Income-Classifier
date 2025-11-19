@@ -189,7 +189,7 @@ This script will train the LightGBM model and save the `adult_lgbm_model.pkl` an
 The FastAPI application serves the trained model for predictions.
 
 ```bash
-uvicorn src.main:app --host 0.0.0.0 --port 9696
+uv run uvicorn src.main:app --host 0.0.0.0 --port 9696
 ```
 
 The API will be accessible at `http://localhost:9696`.
